@@ -1,0 +1,10 @@
+FROM ./inhllm-v2-14700.gguf
+TEMPLATE """{{ .Prompt }}"""
+PARAMETER num_ctx 256
+PARAMETER temperature 0.7
+PARAMETER top_k 20
+PARAMETER repeat_penalty 1.0
+PARAMETER stop "<|eos|>"
+PARAMETER stop "<|end|>"
+
+PARAMETER num_predict 100
